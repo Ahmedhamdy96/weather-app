@@ -71,7 +71,7 @@ getUserLocation().then((response) => {
 
   const apiKey = "cf7430bd46ce4bf6a0845701221504";
   fetch(
-    `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${latitude},${longitude}&lang=ar`
+    `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${latitude},${longitude}&lang=ar`
   )
     .then((response) => {
       return response.json();
@@ -86,7 +86,7 @@ getUserLocation().then((response) => {
     });
 
   fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${latitude},${longitude}&days=3&lang=ar`
+    `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${latitude},${longitude}&days=3&lang=ar`
   )
     .then((response) => response.json())
     .then((response) => {
